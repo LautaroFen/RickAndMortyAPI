@@ -1,0 +1,365 @@
+
+html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para Box Model */
+    scroll-snap-type: y mandatory;
+    background-color: #0f0f0f !important; /* Fondo de color sólido */
+}
+h1, #filters{
+    text-align: center;
+}
+/*--------------------------------------------------------------------------------------*/
+
+/*Navbar*/
+.navbar{
+    border: none;
+}
+.navbar a{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.nav-link {
+    margin: 0 2rem;
+}
+.nav-link:hover {
+    outline: solid 1px #a2ff00; /* Cambia el color del borde al pasar el mouse */
+    text-shadow: 
+    0 0 5px #00ff00,   /* Brillo verde neón */
+    0 0 10px #00ff00,
+    0 0 15px #ffff00,  /* Brillo amarillo */
+    0 0 20px #ffff00,
+    0 0 25px #00ff00,
+    0 0 30px #00ff00;
+
+}
+
+/*Video*/
+.intro{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+}
+.intro.active{
+    visibility: visible;
+    opacity: 1;
+}
+.intro video{
+    max-width: 900px;
+    outline: none;
+}
+.close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+}
+
+/*seccion image*/
+#banner { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    overflow: hidden; /* Mantiene cualquier contenido fuera del contenedor oculto */
+    background-image: url("../IMG/fondo.jpg");
+    background-size: cover;        /* La imagen cubrirá todo el fondo sin deformarse */
+    background-position: center;   /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+}
+#banner::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 1000;
+    background: linear-gradient( to top, #480264, 20%, transparent );
+}
+#banner img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    position: absolute;
+}
+#banner #titulo {
+    width: 80vw;
+    max-width: 95%;
+    max-height: 30%;
+    top: 5vh;
+    z-index: 2;
+}
+#banner #portal {
+    width: 80vh;
+    max-width: 80%;
+    max-height: 80%;
+    z-index: 1;
+    top: 20vh;
+    animation: spin 15s linear infinite;
+}
+#banner #foto {
+    width: 56vw;
+    max-width: 90%;
+    height: 80vh;
+    max-height: 65%;
+    position: absolute;
+    top: 44vh; 
+    margin-top: -10vh;
+    z-index: 1;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*Section info -------------------*/
+#about {
+    background: linear-gradient(135deg, #1b001e, #5a0032, #3d0056, #1e001d, #0d0011);
+    animation: gradientAnimation 10s ease-in-out infinite;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+#about .container {
+    background-color: rgba(97, 97, 97, 0.5);
+    color: #ffffff;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1rem;
+}
+.info-text {
+    flex: 1;
+    max-width: 100%;
+    text-align: left;
+}
+.info-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.info-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.info-text a.btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #5a0032;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/*---------------Multiverse--------------------*/
+/*header*/
+.multiverse-head{
+    color: #ffffff;
+    text-shadow: 
+    1px 1px 2px black,         /* Sombra negra para contorno definido */
+    0 0 5px #8B0000,           /* Rojo oscuro suave alrededor */
+    0 0 10px #8B0000,          /* Aumento del brillo rojo oscuro */
+    0 0 15px #8B0000,          /* Aumento del efecto de sombra roja */
+    0 0 20px black;            /* Sombra negra difusa para resaltar aún más */
+}
+.multiverse-head h1{
+    text-transform: uppercase;
+    font-size: 50px;
+}
+.multiverse-head p{
+    font-size: 22px;
+}
+
+/*Card*/
+.card {
+    cursor: pointer;
+    border: none;
+    border-radius: 12px; /* Bordes redondeados para la tarjeta */
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Transición suave para el hover */
+}
+.card::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    border-radius: 12px;
+    background: linear-gradient(15deg, #00FF00, #39FF14, #00FF7F, #32F7A2); /* Gradiente de neón */
+    background-size: 800%; 
+    filter: blur(8px); 
+    animation: glowing 20s linear infinite;
+    opacity: 0; 
+}
+.card:hover::before {
+    opacity: 1;
+}
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+.card:hover img {
+    transform: scale(1.05); 
+    transition: transform 0.5s ease-in-out; 
+    z-index: 2;
+}
+.card img {
+    transition: transform 0.5s ease-in-out; 
+}
+.card-body {
+    background-color: #000000;
+}
+.card-body h2,
+.card-body p {
+    color: #fff; 
+}
+
+/*Buscador*/
+.buscador{
+    color: #fff;
+}
+.buscador input{
+    background-color: rgb(139, 0, 0, 0.3);
+    border: solid 1px #8B0000;
+}
+#search{
+    color: #fff;
+}
+#search::placeholder {
+    color:white;
+}
+
+/*Filtros*/
+.accordion-button:not(.collapsed)::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(15deg, #00FF00, #39FF14, #00FF7F, #32F7A2); /* Gradiente de neón */
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+.accordion-button.collapsed {
+    background-color: #8B0000;
+    color: #fff;
+}
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.accordion-body{
+    background-color: #000000;
+    font-size: 1em;
+    color: #fff;
+}
+
+
+/*------------------------------------------------------------*/
+.title-contactos{
+    color: #fff;
+    text-decoration: underline;
+}
+.container{
+    width: 100%;
+}
+.contacto{
+    border: solid 1px #fff;
+    padding: 0.5rem;
+    margin: 2rem;
+}
+.contactarse{
+    color: #fff;
+}
+.container.contacto{
+    width: 80vw;
+    height: 80%;
+    padding: 3rem 4rem;
+    background-color:#444444;
+}
+.mi-foto{
+    border-radius: 10%;
+}
+.info-contacto{
+    color: #fff;
+}
+.card-body h5{
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 0.5rem;
+}
+.redes{
+    text-transform: uppercase;
+}
+
+.prox-title{
+    color: red;
+    margin-left: 3rem;
+}
+.contactarse{
+    height: 80%;
+    width: 80%;
+}
+/*-------*/
+#picklerick {
+    cursor: pointer;
+}

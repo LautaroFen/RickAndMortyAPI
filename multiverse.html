@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiverso</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark border-success ">
+        <div class="container-fluid">
+            <a class="navbar-brand me-5 ms-4" href="#">
+                <img src="./IMG/logo.png" alt="" class="img-fluid w-50" onclick="toggleVideo();">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
+                <div class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <hr>
+                    <a class="nav-link text-light " id="inicio" href="inicio.html"><img id="rick"
+                            src="./IMG/rickNo.png">Inicio</a>
+                    <hr>
+                    <a class="nav-link text-light" id="multiverse" href="multiverse.html"><img id="morty"
+                            src="./IMG/mortyNo.png">Multiverse</a>
+                    <hr>
+                    <a class="nav-link text-light" id="ubicaciones" href="./ubicaicones.html"><img id="beth"
+                            src="./IMG/bethNo.png">Ubicaciones</a>
+                    <hr>
+                    <a class="nav-link text-light" id="contactanos" href="./Contactanos.html"><img id="summer"
+                            src="./IMG/summerNo.png">Contactanos</a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="intro">
+        <video src="./IMG/intro.mp4" controls="true" autoplayt="true"></video>
+        <img src="./IMG/close.png" alt="" class="close" onclick="toggleVideo();">
+    </div>
+
+    <!--Buscador-->
+    <header class="multiverse-head text-center"
+        style="background-image: url(./IMG/multiverse.jpg);background-repeat: no-repeat;background-size: cover; background-position: center; object-fit:inherit; background-attachment: fixed; ">
+        <h1 class="pt-3 pb-2">Multiverso de los ricks</h1>
+        <p class="ps-4 pe-4"> Escuchen bien, mortales del multiverso... lo que están a punto de ver no es cualquier
+            colección de personajes; es el historial de figuras cósmicas, cada variante, cada versión absurda de los
+            personajes que han tenido la suerte (o desgracia) de cruzarse conmigo y con Morty. Desde Morty Cíclope hasta
+            Jerry el Valiente, aquí encontrarán toda la gama de seres que definen el caos multiversal. ¿Es peligroso?
+            Claro. ¿Vale la pena? Definitivamente. Así que prepárense para explorar la guía completa de rarezas
+            cósmicas. No se sorprendan si algunos de estos personajes los dejan cuestionándose su propia existencia, o
+            mejor aún, los convencen de que el caos es la única forma de vida que vale la pena
+            <br><br>
+            ¡Bienvenidos al verdadero Multiverso!
+        </p>
+        <br>
+    </header>
+
+    <main class=" main container mt-5">
+        <div class="row">
+            <div class="col-3">
+                <div class="accordion filtro-checked">
+
+                    <!-- Sección Estado -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#state" aria-expanded="false" aria-controls="state">
+                                Estado
+                            </button>
+                        </h2>
+                        <div id="state" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="alive" id="state">
+                                    <label class="form-check-label" for="alive">Vivo</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="dead" id="state">
+                                    <label class="form-check-label" for="dead">Muerto</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="unknown" id="state">
+                                    <label class="form-check-label" for="unknownState">Desconocido</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección Especies -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#species" aria-expanded="true" aria-controls="species">
+                                Especies
+                            </button>
+                        </h2>
+                        <div id="species" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Human" id="species">
+                                    <label class="form-check-label" for="human">Humano</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Alien" id="species">
+                                    <label class="form-check-label" for="Alien">Extraterrestre</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Humanoid" id="species">
+                                    <label class="form-check-label" for="Humanoid">Humanoide</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Poopybutthole" id="species">
+                                    <label class="form-check-label" for="Poopybutthole">Poopybutthole</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Cronenberg" id="species">
+                                    <label class="form-check-label" for="Cronenberg">Cronenberg</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Robot" id="species">
+                                    <label class="form-check-label" for="Robot">Robot</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Mythological Creature"
+                                        id="species">
+                                    <label class="form-check-label" for="Mythological Creature">Criatura
+                                        mitológica</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Parasite" id="species">
+                                    <label class="form-check-label" for="Parasite">Parásito</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Animal" id="species">
+                                    <label class="form-check-label" for="Animal">Animal</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Alien Parasite" id="species">
+                                    <label class="form-check-label" for="Alien Parasite">Parásito extraterrestre</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Planet" id="species">
+                                    <label class="form-check-label" for="Planet">Planeta</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Unknown" id="species">
+                                    <label class="form-check-label" for="Unknown">Desconocido</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección Género -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#gender" aria-expanded="false" aria-controls="gender">
+                                Género
+                            </button>
+                        </h2>
+                        <div id="gender" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="male" id="gender">
+                                    <label class="form-check-label" for="male">Masculino</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="female" id="gender">
+                                    <label class="form-check-label" for="gender">Femenino</label>
+                                </div>
+                                <!-- Agrega el resto de las opciones de género -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Card-->
+            <div class="col-9 buscador">
+                <section class="d-flex justify-content-between">
+                    <h1>Buscador Multiversal</h1>
+                    <form action="#">
+                        <div class="mb-3">
+                            <input type="text" class="form-control-lg me-2" id="search" placeholder="Search">
+                        </div>
+                    </form>
+                </section>
+
+                <!--card-->
+                <section class="mt-3">
+                    <div class="row " id="fotos-card">
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./JS/page.js"></script>
+
+</body>
+
+</html>
