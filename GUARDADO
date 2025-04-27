@@ -1,0 +1,144 @@
+<!-- NO TOCAR  -->
+    <main class=" main container mt-5">
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <button class="btn btn-primary w-100 d-md-none mb-3" type="button" data-bs-toggle="collapse"
+                data-bs-target="#filtersCollapse">
+                Mostrar Filtros
+                </button>
+                <div id="filtersCollapse" class="accordion filtro-checked collapse d-md-block "> 
+                    <!-- Sección Estado -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#state" aria-expanded="false" aria-controls="state">
+                                Estado
+                            </button>
+                        </h2>
+                        <div id="state" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="alive" id="state">
+                                    <label class="form-check-label" for="alive">Vivo</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="dead" id="state">
+                                    <label class="form-check-label" for="dead">Muerto</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="unknown" id="state">
+                                    <label class="form-check-label" for="unknownState">Desconocido</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección Especies -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#species" aria-expanded="true" aria-controls="species">
+                                Especies
+                            </button>
+                        </h2>
+                        <div id="species" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Human" id="species">
+                                    <label class="form-check-label" for="human">Humano</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Alien" id="species">
+                                    <label class="form-check-label" for="Alien">Extraterrestre</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Humanoid" id="species">
+                                    <label class="form-check-label" for="Humanoid">Humanoide</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Poopybutthole" id="species">
+                                    <label class="form-check-label" for="Poopybutthole">Poopybutthole</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Cronenberg" id="species">
+                                    <label class="form-check-label" for="Cronenberg">Cronenberg</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Robot" id="species">
+                                    <label class="form-check-label" for="Robot">Robot</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Mythological Creature"
+                                        id="species">
+                                    <label class="form-check-label" for="Mythological Creature">Criatura
+                                        mitológica</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Parasite" id="species">
+                                    <label class="form-check-label" for="Parasite">Parásito</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Animal" id="species">
+                                    <label class="form-check-label" for="Animal">Animal</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Alien Parasite" id="species">
+                                    <label class="form-check-label" for="Alien Parasite">Parásito extraterrestre</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Planet" id="species">
+                                    <label class="form-check-label" for="Planet">Planeta</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Unknown" id="species">
+                                    <label class="form-check-label" for="Unknown">Desconocido</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección Género -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#gender" aria-expanded="false" aria-controls="gender">
+                                Género
+                            </button>
+                        </h2>
+                        <div id="gender" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="male" id="gender">
+                                    <label class="form-check-label" for="male">Masculino</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="female" id="gender">
+                                    <label class="form-check-label" for="gender">Femenino</label>
+                                </div>
+                                <!-- Agrega el resto de las opciones de género -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card-->
+            <div class="col-12 col-md-9 buscador">
+                <section class="d-flex justify-content-between">
+                    <h1>Buscador Multiversal</h1>
+                    <form action="#">
+                        <div class="mb-3">
+                            <input type="text" class="form-control-lg me-2" id="search" placeholder="Search">
+                        </div>
+                    </form>
+                </section>
+
+                <!--card-->
+                <section class="mt-3">
+                    <div class="row " id="fotos-card">
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+<!-- NO TOCAR  -->
